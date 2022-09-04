@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Your Gender
+  </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="datatb">
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="title">Welcome</div>
+        <div class="subtitle">Let's Predict Your Gender!</i></div>
+        <div class="subtitle" style="
+          color: #6e071de3;
+          font-family: cursive;
+          font-size: 16px;
+          font-weight: 600;
+          margin-top: 10px;"><a href="https://docs.google.com/document/d/1dmEOCWUPAnTqq1Hf3sHASYBd_Mmcd5UXYDBNozeKHEk/edit?usp=sharing">MANUAL</a></div>
+        <div class="input-container ic1">
+          <input id="longhair1" class="input" type="text" placeholder=" " name="longhair" required/>
+          <div class="cut"></div>
+          <label for="longhair1" class="placeholder">Long Hair</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="fwidth" class="input" type="text" placeholder=" " name="fwidth" required/>
+          <div class="cut"></div>
+          <label for="fwidth1" class="placeholder">Forehead Width (cm)</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="fheight" class="input" type="text" placeholder=" " name="fheight" required/>
+          <div class="cut cut-short"></div>
+          <label for="fheight1" class="placeholder">Forehead Height (cm)</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="nosewide1" class="input" type="text" placeholder=" " name="nosewide" required/>
+            <div class="cut cut-short"></div>
+            <label for="nosewide1" class="placeholder">Nose Wide</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="noselong1" class="input" type="text" placeholder=" " name="noselong" required/>
+            <div class="cut cut-short"></div>
+            <label for="noselong1" class="placeholder">Nose Long</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="lipsthin1" class="input" type="text" placeholder=" " name="lipsthin" required/>
+            <div class="cut cut-short"></div>
+            <label for="lipsthin1" class="placeholder">Lips Thin</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="disntp1" class="input" type="text" placeholder=" " name="disntp" required/>
+            <div class="cut cut-short"></div>
+            <label for="disntp1" class="placeholder">Lips - Nose Distance</label>
+          </div>
+        <button type="submit" class="submit">PREDICT</button>
+
+        <p type="text" class="pred_text">{{ prediction_text }}</p>
+      </div>
+
+        </form>
+        
+
+
+
+</body>
+</html>
